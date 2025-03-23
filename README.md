@@ -52,10 +52,10 @@ The script generates `clif_vitals.parquet` in the `outputs/` folder.
 
 ## Data Quality Evaluation
 
-The resulting `clif_vitals.parquet` file should be uploaded to the **CLIF Lighthouse** tool to evaluate data quality, including checks for completeness, accuracy, and consistency.
+The resulting `clif_vitals.parquet` file should be uploaded to the **CLIF Lighthouse** tool to evaluate data quality, including checks for completeness, accuracy, and consistency. The tool can be downloaded from the link below.
 
 **CLIF Lighthouse**:  
-[https://clif.clinicalresearch.io](https://clif.clinicalresearch.io)
+https://github.com/Common-Longitudinal-ICU-data-Format/CLIF-Lighthouse
 
 ---
 
