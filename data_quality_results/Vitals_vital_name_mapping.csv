@@ -1,0 +1,27 @@
+,vital_name,vital_category,counts
+0,Heart Rate,heart_rate,13913
+1,Respiratory Rate,respiratory_rate,13913
+2,O2 saturation pulseoxymetry,spo2,13540
+3,Non Invasive Blood Pressure diastolic,dbp,8349
+4,Non Invasive Blood Pressure systolic,sbp,8347
+5,Non Invasive Blood Pressure mean,map,8342
+6,Arterial Blood Pressure mean,map,5560
+7,Arterial Blood Pressure systolic,sbp,5525
+8,Arterial Blood Pressure diastolic,dbp,5524
+9,Temperature Site,temp_c,3794
+10,Temperature Fahrenheit,temp_c,3379
+11,Respiratory Rate (Total),MAPPED ELSEWHERE,1331
+12,Respiratory Rate (spontaneous),MAPPED ELSEWHERE,1314
+13,Respiratory Rate (Set),MAPPED ELSEWHERE,801
+14,ART BP Mean,map,488
+15,ART BP Diastolic,dbp,486
+16,ART BP Systolic,sbp,486
+17,Daily Weight,weight_kg,441
+18,Temperature Celsius,temp_c,391
+19,Admission Weight (lbs.),weight_kg,236
+20,Admission Weight (Kg),weight_kg,129
+21,Height (cm),height_cm,71
+22,Manual Blood Pressure Systolic Right,sbp,5
+23,Manual Blood Pressure Diastolic Right,dbp,5
+24,Manual Blood Pressure Diastolic Left,dbp,3
+25,Manual Blood Pressure Systolic Left,sbp,3

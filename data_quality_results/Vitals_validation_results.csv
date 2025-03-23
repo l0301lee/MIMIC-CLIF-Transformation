@@ -1,0 +1,7 @@
+,Column,Actual,Expected,Status
+0,hospitalization_id,object,object,Match
+1,recorded_dttm,"datetime64[us, UTC]",datetime64,Match
+2,vital_name,object,object,Match
+3,vital_category,object,object,Match
+4,vital_value,float64,float64,Match
+5,meas_site_name,object,object,Match
