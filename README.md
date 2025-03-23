@@ -14,6 +14,12 @@ MIMIC-CLIF-Transformation/
 ├── outputs/
 │   └── clif_vitals.parquet    # Transformed data in CLIF format (output)
 ├── CLIF_formatting.R          # R script for transformation
+├── data_quality_results/      # Folder for evaluation results
+│   ├── Vitals_category_summary_statistics.csv
+│   ├── Vitals_missingness.csv
+│   ├── Vitals_validation_results.csv
+│   ├── Vitals_vital_category_value_distribution.png
+│   └── Vitals_vital_name_mapping.csv
 └── README.md                  # Documentation for project setup and execution
 ```
 
@@ -56,6 +62,8 @@ The resulting `clif_vitals.parquet` file should be uploaded to the **CLIF Lighth
 
 **CLIF Lighthouse**:  
 https://github.com/Common-Longitudinal-ICU-data-Format/CLIF-Lighthouse
+
+The results of the evaluation are in the `data_quality_results` folder.
 
 ---
 
