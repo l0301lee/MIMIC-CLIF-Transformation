@@ -15,6 +15,7 @@ chartevents <- fread(chartevents_path) # MIMIC-III data
 mappings <- fread(mappings_path) # ItemID to CLIF vitals mappings
 colnames(mappings)[16] <- "meas_site_alt"
 
+
 # Drop unnecessary columns that might cause issues
 mappings <- mappings %>%
   rename(label = `label = vital_name`) %>%
@@ -37,6 +38,9 @@ chartevents_selected <- chartevents %>%
 chartevents_mapped <- chartevents_selected %>%
   inner_join(mappings_unique, by = "itemid") %>% 
   filter(vital_category != "NO MAPPING")
+
+# used inner_join() because I only want rows that have known mappings.
+# if I used left_join(), I'd get all chartevents_selected rows, and unmatched ones would have NA in vital_category
 
 # Fix data type mismatches before final transformation
 clif_vitals <- chartevents_mapped %>%
@@ -66,12 +70,12 @@ clif_vitals <- clif_vitals %>%
   ) %>%
   select(-valueuom)
 
-# Define threshold table
+# Define threshold table with updated vital names and conversions
 thresholds <- data.table(
-  vital_category = c("height_inches", "weight_kg", "sbp", "dbp", "map", 
-                     "pulse", "respiratory_rate", "spo2", "temp_c"),
-  lower_limit = c(30, 30, 0, 0, 0, 0, 0, 50, 32),
-  upper_limit = c(96, 1100, 300, 200, 250, 300, 60, 100, 44)
+  vital_category = c("height_cm", "weight_kg", "sbp", "dbp", "map", 
+                     "heart_rate", "respiratory_rate", "spo2", "temp_c"),
+  lower_limit = c(30 * 2.54, 30, 0, 0, 0, 0, 0, 50, 32),
+  upper_limit = c(96 * 2.54, 1100, 300, 200, 250, 300, 60, 100, 44)
 )
 
 replace_outliers_custom <- function(df, thresholds) {
